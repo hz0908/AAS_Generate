@@ -1,0 +1,87 @@
+[
+    {
+        "assetName":"franka机械臂",
+        "assetDescription":"一种高精度的机械臂",
+        "importSeg":"lib1",
+        "initSeg":{
+            "initDescription":"Initialization for franka机械臂",
+            "initCode":"def init_franka():\n    pass"
+        },
+        "resetSeg":{
+            "resetDescription":"Reset for franka机械臂",
+            "resetCode":"def reset_franka():\n    pass"
+        },
+        "physicsSeg":{
+            "physicsDescription":"Physics operations for franka机械臂",
+            "physicsCode":"def physics_franka():\n    pass"
+        }
+    },
+    {
+        "assetName":"jetbot小车",
+        "assetDescription":"一个用于移动的智能小车",
+        "importSeg":"lib3",
+        "initSeg":{
+            "initDescription":"Initialization for jetbot小车",
+            "initCode":"def init_jetbot():\n    pass"
+        },
+        "resetSeg":{
+            "resetDescription":"Reset for jetbot小车",
+            "resetCode":"def reset_jetbot():\n    pass"
+        },
+        "physicsSeg":{
+            "physicsDescription":"Physics operations for jetbot小车",
+            "physicsCode":"def physics_jetbot():\n    pass"
+        }
+    },
+    {
+        "assetName":"ur10机械臂",
+        "assetDescription":"另一种性能优良的机械臂",
+        "importSeg":"lib4",
+        "initSeg":{
+            "initDescription":"Initialization for ur10机械臂",
+            "initCode":"def init_ur10():\n    pass"
+        },
+        "resetSeg":{
+            "resetDescription":"Reset for ur10机械臂",
+            "resetCode":"def reset_ur10():\n    pass"
+        },
+        "physicsSeg":{
+            "physicsDescription":"Physics operations for ur10机械臂",
+            "physicsCode":"def physics_ur10():\n    pass"
+        }
+    },
+    {
+        "assetName":"物料盘",
+        "assetDescription":"一个盘子",
+        "importSeg":"lib4",
+        "initSeg":{
+            "initDescription":"Initialization for 物料盘",
+            "initCode":"def init_ur10():\n    pass"
+        },
+        "resetSeg":{
+            "resetDescription":"Reset for 物料盘",
+            "resetCode":"def reset_ur10():\n    pass"
+        },
+        "physicsSeg":{
+            "physicsDescription":"Physics operations for 物料盘",
+            "physicsCode":"def physics_ur10():\n    pass"
+        }
+    },
+    {
+        "assetName":"物块A",
+        "assetDescription":"一个方块",
+        "importSeg":"lib4",
+        "initSeg":{
+            "initDescription":"Initialization for 物块A",
+            "initCode":"def init_ur10():\n    pass"
+        },
+        "resetSeg":{
+            "resetDescription":"Reset for 物块A",
+            "resetCode":"def reset_ur10():\n    pass"
+        },
+        "physicsSeg":{
+            "physicsDescription":"Physics operations for 物块A",
+            "physicsCode":"def physics_ur10():\n    pass"
+        }
+    }
+]

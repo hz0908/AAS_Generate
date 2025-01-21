@@ -1,0 +1,58 @@
+{
+    "equipmentInfo": [
+    {
+    "equipmentName": "franka 机械臂",
+    "quantity": 2,
+    "instanceEquipment": [
+    {
+    "descriptionName": "franka 机械臂 A",
+    "programName": "franka_arm_A"
+    },
+    {
+    "descriptionName": "franka 机械臂 B",
+    "programName": "franka_arm_B"
+    }
+    ]
+    },
+    {
+    "equipmentName": "ur10 机械臂",
+    "quantity": 1,
+    "instanceEquipment": [
+    {
+    "descriptionName": "ur10 机械臂",
+    "programName": "ur10_arm"
+    }
+    ]
+    },
+    {
+    "equipmentName": "工作台",
+    "quantity": 1,
+    "instanceEquipment": [
+    {
+    "descriptionName": "工作台",
+    "programName": "workbench"
+    }
+    ]
+    },
+    {
+    "equipmentName": "托盘",
+    "quantity": 1,
+    "instanceEquipment": [
+    {
+    "descriptionName": "托盘",
+    "programName": "pallet"
+    }
+    ]
+    },
+    {
+    "equipmentName": "运输车",
+    "quantity": 1,
+    "instanceEquipment": [
+    {
+    "descriptionName": "运输车",
+    "programName": "transport_vehicle"
+    }
+    ]
+    }
+    ]
+    }

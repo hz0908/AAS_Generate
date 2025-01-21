@@ -1,0 +1,59 @@
+{
+    "equipmentInfo": [
+      {
+        "equipmentName": "franka机械臂",
+        "quantity": 1,
+        "instanceEquipment": [
+          {
+            "descriptionName": "franka机械臂",
+            "programName": "franka_arm",
+            "position": "[0, 0, 0]"
+          }
+        ]
+      },
+      {
+        "equipmentName": "jetbot小车",
+        "quantity": 1,
+        "instanceEquipment": [
+          {
+            "descriptionName": "jetbot小车",
+            "programName": "jetbot_cart",
+            "position": "[10, 0, 0]"
+          }
+        ]
+      },
+      {
+        "equipmentName": "ur10机械臂",
+        "quantity": 1,
+        "instanceEquipment": [
+          {
+            "descriptionName": "ur10机械臂",
+            "programName": "ur10_arm",
+            "position": "[20, 0, 0]"
+          }
+        ]
+      },
+      {
+        "equipmentName": "物料盘",
+        "quantity": 1,
+        "instanceEquipment": [
+          {
+            "descriptionName": "物料盘",
+            "programName": "material_tray",
+            "position": "[25, 0, 0]"
+          }
+        ]
+      },
+      {
+        "equipmentName": "物块A",
+        "quantity": 1,
+        "instanceEquipment": [
+          {
+            "descriptionName": "物块A",
+            "programName": "block_A",
+            "position": "[0, 0, 0]"
+          }
+        ]
+      }
+    ]
+  }

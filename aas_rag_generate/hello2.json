@@ -1,0 +1,50 @@
+{
+    "task_count": 3,
+    "task_set": [
+      {
+        "task_number": 1,
+        "task_description": "scalar 机械臂 A 将物块 B 抓起放到传送带 C 上",
+        "asset_used": [
+          {
+            "user_description": "scalar 机械臂 A"
+          },
+          {
+            "user_description": "物块 B"
+          },
+          {
+            "user_description": "传送带 C"
+          }
+        ]
+      },
+      {
+        "task_number": 2,
+        "task_description": "传送带 C 将物块 B 运输到 delata 机器人 D 前",
+        "asset_used": [
+          {
+            "user_description": "传送带 C"
+          },
+          {
+            "user_description": "物块 B"
+          },
+          {
+            "user_description": "delata 机器人 D"
+          }
+        ]
+      },
+      {
+        "task_number": 3,
+        "task_description": "delata 机器人 D 将物块抓起放到物料盘上",
+        "asset_used": [
+          {
+            "user_description": "delata 机器人 D"
+          },
+          {
+            "user_description": "物块 B"
+          },
+          {
+            "user_description": "物料盘"
+          }
+        ]
+      }
+    ]
+  }
