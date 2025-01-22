@@ -14,7 +14,7 @@ def main():
                 "import numpy as np\n"
             ),
             "initSeg": {
-                "initDescription": "将franka机械臂放置在[1,2,0]位置并初始化，其中变量名使用my_franka或以my_franka为前缀",
+                "initDescription": "franka机械臂放置在[1,2,0]位置并初始化的代码如下，变量名使用my_franka或以my_franka为前缀\n",
                 "initCode": (
                     "my_franka = my_world.scene.add(Franka(prim_path='/World/Franka', name='my_franka', position=np.array([1,2,0])))\n"
                     "my_franka.gripper.set_joint_positions(my_franka.gripper.joint_opened_positions)\n"
@@ -58,7 +58,7 @@ def main():
                 "from omni.isaac.wheeled_robots.robots import WheeledRobot\n"
             ),
             "initSeg": {
-                "initDescription": "Initialization for jetbot小车",
+                "initDescription": "将jetbot小车放置在[0,0.0,2]并初始化的代码如下，变量名使用my_jetbot或以my_jetbot为前缀\n",
                 "initCode": (
                     "assets_root_path = get_assets_root_path()\n"
                     "if assets_root_path is None:\n"
@@ -93,9 +93,15 @@ def main():
         {
             "assetName": "ur10机械臂",
             "assetDescription": "另一种性能优良的机械臂",
-            "importSeg": "lib4",
+            "importSeg": (
+                    "import numpy as np\n"
+                    "from omni.isaac.universal_robots import UR10\n"
+                    "from omni.isaac.core import World\n"
+                    "from omni.isaac.universal_robots.controllers.pick_place_controller import PickPlaceController as ur10_PickPlaceController\n"
+                    "from omni.isaac.core.objects import DynamicCuboid\n"
+            ),
             "initSeg": {
-                "initDescription": "将ur10机械臂放置在[0,0,0]并初始化，其中变量名使用ur10_arm或以ur10_arm为前缀",
+                "initDescription": "将ur10机械臂放置在[0,0,0]并初始化的代码如下，其中变量名使用ur10_arm或以ur10_arm为前缀\n",
                 "initCode": (
                     "ur10_arm = my_world.scene.add(UR10(prim_path='/World/UR10', name='ur10_arm', positon=np.array([0, 0, 0]), gripper_usd=None, attach_gripper=True))\n"
                     "ur10_arm.set_joints_default_state(\n"
@@ -165,7 +171,7 @@ def main():
             "assetDescription": "一个方块",
             "importSeg": "from omni.isaac.core.objects import DynamicCuboid\n",
             "initSeg": {
-                "initDescription": "初始化一个的物块，放置在位置[0.3, 0.3, 0.3]，变量名使用cube或以cube为前缀",
+                "initDescription": "将一个物块放置在位置[0.3, 0.3, 0.3]并初始化的代码如下，变量名使用cube或以cube为前缀\n",
                 "initCode": (
                     "cube = my_world.scene.add(\n"
                     "    DynamicCuboid(\n"
@@ -176,6 +182,7 @@ def main():
                     "        size=1.0,\n"
                     "        color=np.array([0, 0, 1]),\n"
                     "    )\n"
+                    ")\n"
                 )
             },
             "resetSeg": {

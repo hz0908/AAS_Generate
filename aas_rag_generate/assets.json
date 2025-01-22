@@ -4,7 +4,7 @@
         "assetDescription": "一种高精度的机械臂",
         "importSeg": "from omni.isaac.franka import Franka\nfrom omni.isaac.core import World\nfrom omni.isaac.core.objects import DynamicCuboid\nfrom omni.isaac.franka.controllers import PickPlaceController as franka_PickPlaceController\nimport numpy as np\n",
         "initSeg": {
-            "initDescription": "将franka机械臂放置在[1,2,0]位置并初始化，其中变量名使用my_franka或以my_franka为前缀",
+            "initDescription": "franka机械臂放置在[1,2,0]位置并初始化的代码如下，变量名使用my_franka或以my_franka为前缀\n",
             "initCode": "my_franka = my_world.scene.add(Franka(prim_path='/World/Franka', name='my_franka', position=np.array([1,2,0])))\nmy_franka.gripper.set_joint_positions(my_franka.gripper.joint_opened_positions)\nmy_franka_controller = franka_PickPlaceController(\n    name='pick_place_controller', gripper=my_franka.gripper, robot_articulation=my_franka\n)\nmy_franka_articulation_controller = my_franka.get_articulation_controller()\n"
         },
         "resetSeg": {
@@ -21,7 +21,7 @@
         "assetDescription": "一个用于移动的智能小车",
         "importSeg": "import carb\nimport numpy as np\nfrom omni.isaac.core import World\nfrom omni.isaac.nucleus import get_assets_root_path\nfrom omni.isaac.wheeled_robots.controllers.differential_controller import DifferentialController\nfrom omni.isaac.wheeled_robots.robots import WheeledRobot\n",
         "initSeg": {
-            "initDescription": "Initialization for jetbot小车",
+            "initDescription": "将jetbot小车放置在[0,0.0,2]并初始化的代码如下，变量名使用my_jetbot或以my_jetbot为前缀\n",
             "initCode": "assets_root_path = get_assets_root_path()\nif assets_root_path is None:\n    carb.log_error('Could not find Isaac Sim assets folder')\njetbot_asset_path = assets_root_path + '/Isaac/Robots/Jetbot/jetbot.usd'\nmy_jetbot = my_world.scene.add(\n    WheeledRobot(\n        prim_path='/World/Jetbot',\n        name='my_jetbot',\n        wheel_dof_names=['left_wheel_joint', 'right_wheel_joint'],\n        create_robot=True,\n        usd_path=jetbot_asset_path,\n        position=np.array([0, 0.0, 2.0]),\n    )\n)\nmy_jetbot_controller = DifferentialController(name='simple_control', wheel_radius=0.03, wheel_base=0.1125)\n"
         },
         "resetSeg": {
@@ -36,9 +36,9 @@
     {
         "assetName": "ur10机械臂",
         "assetDescription": "另一种性能优良的机械臂",
-        "importSeg": "lib4",
+        "importSeg": "import numpy as np\nfrom omni.isaac.universal_robots import UR10\nfrom omni.isaac.core import World\nfrom omni.isaac.universal_robots.controllers.pick_place_controller import PickPlaceController as ur10_PickPlaceController\nfrom omni.isaac.core.objects import DynamicCuboid\n",
         "initSeg": {
-            "initDescription": "将ur10机械臂放置在[0,0,0]并初始化，其中变量名使用ur10_arm或以ur10_arm为前缀",
+            "initDescription": "将ur10机械臂放置在[0,0,0]并初始化的代码如下，其中变量名使用ur10_arm或以ur10_arm为前缀\n",
             "initCode": "ur10_arm = my_world.scene.add(UR10(prim_path='/World/UR10', name='ur10_arm', positon=np.array([0, 0, 0]), gripper_usd=None, attach_gripper=True))\nur10_arm.set_joints_default_state(\n    positions=np.array([-np.pi / 2, -np.pi / 2, -np.pi / 2, -np.pi / 2, np.pi / 2, 0])\n)\nur10_arm.gripper.set_default_state(opened=True)\nur10_arm_controller = ur10_PickPlaceController(name='pick_place_controller', gripper=ur10_arm.gripper, robot_articulation=ur10_arm)\nur10_arm_articulation_controller = ur10_arm.get_articulation_controller()\n"
         },
         "resetSeg": {
@@ -72,8 +72,8 @@
         "assetDescription": "一个方块",
         "importSeg": "from omni.isaac.core.objects import DynamicCuboid\n",
         "initSeg": {
-            "initDescription": "初始化一个的物块，放置在位置[0.3, 0.3, 0.3]，变量名使用cube或以cube为前缀",
-            "initCode": "cube = my_world.scene.add(\n    DynamicCuboid(\n        name='cube',\n        position=np.array([0.3, 0.3, 0.3]),\n        prim_path='/World/Cube',\n        scale=np.array([0.0515, 0.0515, 0.0515]),\n        size=1.0,\n        color=np.array([0, 0, 1]),\n    )\n"
+            "initDescription": "将一个物块放置在位置[0.3, 0.3, 0.3]并初始化的代码如下，变量名使用cube或以cube为前缀\n",
+            "initCode": "cube = my_world.scene.add(\n    DynamicCuboid(\n        name='cube',\n        position=np.array([0.3, 0.3, 0.3]),\n        prim_path='/World/Cube',\n        scale=np.array([0.0515, 0.0515, 0.0515]),\n        size=1.0,\n        color=np.array([0, 0, 1]),\n    )\n)\n"
         },
         "resetSeg": {
             "resetDescription": "Reset for 物块A",
